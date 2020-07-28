@@ -1,0 +1,25 @@
+# Create a Data Base
+
+# Login
+$: mysql -u root -p
+
+# Checking all the databases
+$: SHOW DATABASES;
+
+# Creating a new DB
+$: CREATE DATABASE blogtesting;
+
+# Using created DB for more operations
+$: USE blogtesting;
+
+# Creating a table user
+$: CREATE TABLE users(id INT(11) AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100) NOT NULL, email VARCHAR(100) NOT NULL, username VARCHAR(50) NOT NULL, password VARCHAR(100) NOT NULL, register_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, UNIQUE(username));
+
+# Checking Table
+$: SHOW TABLES;
+
+# Checking the table
+$: DESCRIBE users;
+
+# Executing the query
+INSERT INTO  users(name, email, username, password) VALUES(%s, %s, %s, %s), (name, email, username, password)

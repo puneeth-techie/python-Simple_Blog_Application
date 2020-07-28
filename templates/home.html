@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+      <h1>Welcome To Technology Blog</h1>
+      <p class="lead">A lot of companies have chosen to downsize, and maybe that was the right thing for them. We chose a different path. Our belief was that if we kept putting great products in front of customers, they would continue to open their wallets.</p>
+      {% if session.logged_in == NULL %}
+        <a href="/register" class="btn btn-primary btn-lg">Register</a>
+        <a href="/login" class="btn btn-success btn-lg">Login</a>
+      {% else %}
+        <a href="/dashboard" class="btn btn-success">Dashboard</a>
+      {% endif %}
+  </div>
+{% endblock %}
